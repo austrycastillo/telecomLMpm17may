@@ -152,6 +152,15 @@ let atletas = []
 let tiempo = []
 let cantidad = parseInt(window.prompt("Escribe la cantidad de atletas"));
 for (var i = 0; i < cantidad; i++) {
-    atletas[i] = window.prompt("Escribe el nombre del atleta " + i);
-    tiempo[i] = parseInt(window.prompt("Escribe el tiempo que tardó" + i));
+    atletas[i] = window.prompt("Escribe el nombre del atleta " + (i + 1));
+    tiempo[i] = parseInt(window.prompt("Escribe el tiempo que tardó" + (i + 1)));
 }
+let ganador = atletas[0];
+let min = tiempo[0];
+for (var i = 0;i < tiempo.length; i++) {
+    if (tiempo[i] < min) {
+        min = tiempo[i];
+        ganador = atletas[i];
+    }
+}
+document.write("El ganador es " + ganador + " con un tiempo de " + min);
