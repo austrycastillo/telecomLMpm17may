@@ -1,0 +1,66 @@
+package com.telecomeducacionit.practicas;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		/*
+		 * opción 1 declarar variable tipo identificador; inicializar identificador =
+		 * valor; opción 2 declarar e inicializar tipo identificador = valor;
+		 */
+		// variables de números enteros
+		/*
+		 * byte edad; edad = 16; short stock = 5680; int dni = 12345678; long x =
+		 * 1234567891; System.out.println(stock); stock = 8900;
+		 * System.out.println(stock); // números decimales double a = 25.80; float b =
+		 * 14.55f; System.out.println(a); // booleano boolean result = true; char c =
+		 * 'A'; String nombre = "Pepe"; System.out.println("Nombre: " + nombre +
+		 * ", edad: " + edad); // + - * / % System.out.println("La suma es " + (150 +
+		 * 200)); int d = 5 * 5; System.out.println(d); System.out.println(9 % 2);//
+		 * resto // += -= *= /= %= edad += 18; // edad = edad + 18;
+		 * System.out.println(edad); // ++ -- edad--;// edad = edad - 1;
+		 * System.out.println(edad); // comparar: < <= > >= == != System.out.println(100
+		 * == 250); // true && true = true // falso || falso = falso
+		 * 
+		 * /* if(condición){ instrucciones }
+		 ********
+		 * if(condición){ instrucciones 1 }else{ instrucciones 2 }
+		 *********
+		 * if(condición){ if(condición){ instru } }else{ instrucciones 2 }
+		 *******
+		 * if(condición){ instrucciones 1 }elseif(condición){ instrucciones 2 }else{
+		 * instrucciones 3 }
+		 */
+
+		/*
+		 * PRACTICA ONE un obrero desea saber cuanto va a cobrar en la semana, de
+		 * acuerdo a sus horas trabajadas máximo 40 horas --> 16U$D (ej. 40 *16) superar
+		 * el máximo, horas extras --> 20U$D
+		 * 
+		 */
+
+		Scanner teclado = new Scanner(System.in);
+		/*
+		 * System.out.println("Escribe las horas trabajadas"); int horasT =
+		 * teclado.nextInt(); int horasE = 0, maxHoras = 40; int precioHoraR = 16,
+		 * precioHoraE = 20; int sueldoB = 0, sueldoE=0, sueldoF=0; if (horasT <=
+		 * maxHoras) { sueldoB = horasT * precioHoraR; }else { horasE = horasT -
+		 * maxHoras; sueldoE = horasE * precioHoraE; sueldoB = maxHoras * precioHoraR; }
+		 * sueldoF = sueldoB + sueldoE; System.out.println("Tu sueldo base es " +
+		 * sueldoB + ", sueldo extra " + sueldoE + ", sueldo total " + sueldoF);
+		 */
+
+		// PRACTICA 2
+		// SISTEMA DE LOGUEO
+		System.out.println("Escribe tu usuario");
+		String usuario = teclado.next();
+		System.out.println("Escribe tu password");
+		String clave = teclado.next();
+		if (usuario.equals("admin") && clave.equals("ab123"))
+			System.out.println("Bienvenido al sistema");
+		else
+			System.out.println("Datos incorrectos");
+	}
+
+}
