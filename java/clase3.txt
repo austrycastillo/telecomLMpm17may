@@ -1,0 +1,94 @@
+package com.telecomeducacionit.modulos;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class AppPrincipal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		/*
+		 * int ale = (int) (Math.random() * 10); // System.out.println(ale); //armando
+		 * jugada de la máquina String jm; if (ale <= 3) jm = "piedra"; else if (ale <=
+		 * 6) jm = "papel"; else jm = "tijera";
+		 * 
+		 * // System.out.println(jm); //armando la jugada del usuario
+		 * System.out.println("Escribe tu número de jugada" +
+		 * "\n\t1 piedra\n\t2 papel\n\t3 tijera"); int num = teclado.nextInt(); if (num
+		 * != 1 && num != 2 && num != 3) System.out.println("Error!"); else { String j;
+		 * if (num == 1) j = "piedra"; else if (num == 2) j = "papel"; else j =
+		 * "tijera";
+		 * 
+		 * //comparo las jugadas String rta; if(jm.equals(j)) rta= "Empate!"; else
+		 * if(jm.equals("tijera") && j.equals("papel")) rta="gana la máquina"; else
+		 * if(jm.equals("piedra") && j.equals("tijera")) rta="gana la máquina"; else
+		 * if(jm.equals("papel") && j.equals("piedra")) rta="gana la máquina"; else
+		 * rta="gana el jugador ;)";
+		 * 
+		 * System.out.println("Máquina jugó: " + jm + "\nJugador jugó: " + j +
+		 * "\n****RESULTADO****\n" + rta ); }
+		 */
+		/*
+		 * switch(variable){ casos valor: instrucciones break; . . default:
+		 * instrucciones break;
+		 * 
+		 * }
+		 */
+		/*
+		 * dejar solo dos decimales double d = 7435.9876; double roundDbl = Math.round(d
+		 * * 100.0) / 100.0; System.out.println(roundDbl);
+		 */
+		/*
+		 * desarrollar un sistema de matriculación universitaria, solicitar al usuario
+		 * la carrera a estudiar tener diferentes aranceles
+		 */
+
+		/*
+		 * String carrera, usuario; double arancel = 0, matri = 500; String fecha = "";
+		 * System.out.println("Bienvenid@, digite su nombre"); usuario = teclado.next();
+		 * System.out.println("Escriba la carrera a matricular" +
+		 * "\n\tSistemas\n\tMedicina\n\tDerecho"); carrera =
+		 * teclado.next().toUpperCase(); switch (carrera) { case "SISTEMAS": arancel =
+		 * (matri + 100) * 0.86; fecha = "23 de agosto"; break; case "MEDICINA": arancel
+		 * = (matri + 200) * 1.15; fecha = "28 de agosto"; break; case "DERECHO":
+		 * arancel = (matri + 100) * 0.95; fecha = "31 de agosto"; break; default:
+		 * System.out.println("No existe la carrera"); } System.out.println("El alumno "
+		 * + usuario + " va a matricularse en " + carrera + " \nArancel: " + arancel +
+		 * "\nfecha de inicio: " + fecha);
+		 */
+
+		/*
+		 * while(condición){ instrucciones ajuste }
+		 */
+		/*
+		 * mostrar los números del 500 al 800 de 5 en 5
+		 */
+		/*
+		 * int a = 500; int b = 800; while(a <= b) { System.out.println(a); a += 5;//a =
+		 * a + 5; }
+		 */
+		/*
+		 * do{ instrucción ajuste }while(condición);
+		 */
+		/*int b = 590;
+		do {
+			System.out.println(b);
+			b--;
+		} while (b > 1000);*/
+		
+		/*
+		 desarrollar un sistema de caja:
+		 - 3 productos
+		 - do while
+		 */
+		String texto = JOptionPane.showInputDialog("ingrese un texto");
+		System.out.println("Escribiste " + texto);
+		JOptionPane.showMessageDialog(null, texto);
+		int result = JOptionPane.showConfirmDialog(null, "¿Quieres?");
+		//0 es true 1 es false 2 cancel
+		System.out.println(result);
+		//JOptionPane.QUESTION_MESSAGE()
+	}
+
+}
