@@ -1,0 +1,122 @@
+package com.telecomeducacionit.practicas;
+
+import java.util.Scanner;
+
+public class AppPrincipal {
+	// procedimientos
+	public static void saludar() {
+		System.out.println("Holaaaaaaa");
+	}
+
+	public static void bailar(String nombre) {
+		System.out.println("Estoy bailando con " + nombre);
+	}
+
+	public static void informar(String apellido, int edad) {
+		System.out.println("Tu apellido es " + apellido + " y tienes " + edad + " años de edad");
+	}
+
+	// funciones
+	public static String cantar() {
+		String cancion = "Que el mundo fue y será una porquería,\r\n" + "ya lo sé…\r\n" + "¡En el quinientos seis\r\n"
+				+ "y en el dos mil también!\r\n" + "Que siempre ha habido chorros";
+		return cancion;
+	}
+
+	public static int sumar(int a, int b) {
+		System.out.println("La suma es");
+		return a + b;
+	}
+
+	public static Scanner teclado = new Scanner(System.in);
+
+	public static String solicitarUsuario() {
+		System.out.println("Escribe tu usuario");
+		String usuario = teclado.next();
+		return usuario;
+	}
+
+	public static String solicitarClave() {
+		System.out.println("Escribe tu clave");
+		String clave = teclado.next();
+		return clave;
+	}
+
+	public static void acceder(String usuario, String clave) {
+		if (usuario.equals("admin") && clave.equals("a123"))
+			System.out.println("Bienvenidos al sistema");
+		else
+			System.out.println("Datos incorrectos");
+	}
+
+	public static void main(String[] args) {
+		String u = solicitarUsuario();
+		String c = solicitarClave();
+		acceder(u,c);
+		
+		saludar();
+		bailar("Martin");
+		String apellido = "Cabrera";
+		informar(apellido, 16);
+		System.out.println(cantar());
+		System.out.println(sumar(50, 120));
+		/*
+		 * desarrollar un sistema que solicite usuario y clave para acceder al sistema
+		 */
+		/*
+		 * TIPO IDENTIFICADOR [] = new TIPO[TAMAÑO]; TIPO []IDENTIFICADOR =
+		 * {VALOR,VALOR,VALOR};
+		 */
+
+//		int numeros[] = new int[6];
+//		numeros[0] = 2;
+//		numeros[1] = 4;
+//		numeros[2] = 10;
+//		numeros[3] = 250;
+//		numeros[4] = 1;
+//		numeros[5] = 87;
+//		System.out.println(numeros[2]);
+//		numeros[2] = 1200;
+//		System.out.println(numeros[2]);
+//		String[] nombres = { "Ramona", "Pepe", "Juana", "Petronila" };
+//		System.out.println(nombres[2]);
+		/*
+		 * for(inicio;condición;ajuste){ instrucciones }
+		 */
+//		for (int i = 0; i < nombres.length; i++) {
+//			System.out.println(nombres[i]);
+//		}
+		// crear un programa que imprima los números
+		// del 1 al 100 pero que no muestre el 50, ni el 70
+		// sumar todos los números
+
+//		int[] nums = new int[100];
+//		int suma = 0;
+//		for (int i = 0, j = 1; i < nums.length; i++, j++) {
+//			nums[i] = j;
+//			suma += nums[i];
+//			if (nums[i] != 50 && nums[i] != 70)
+//				System.out.println(nums[i]);
+//		}
+//		System.out.println("La suma es " + suma);
+//		String[] nombres = { "Ramona", "Pepe", "Juana", "Petronila" };
+		// foreach
+//		for (String x : nombres) {
+//			System.out.println(x);
+//		}
+		// copiar un arreglo
+//		String []nombresCopia = new String[nombres.length];
+//		System.arraycopy(nombres, 0, nombresCopia, 0, nombres.length);
+//		System.out.println("***copia***");
+//		for (String x : nombresCopia) {
+//			System.out.println(x);
+//		}
+
+		/*
+		 * métodos: 1- funciones (return) 2- procedimientos (no tienen return - void)
+		 * sintaxis: modificador static retorno identificador (params){ instrucciones }
+		 */
+
+	}
+
+}
