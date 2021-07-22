@@ -1,0 +1,81 @@
+package com.telecomeducacionit.modulos;
+
+public class Operacion {
+	public static int sumar(int a, int b) {
+		return a + b;
+	}
+
+	public static int restar(int a, int b) {
+		return a - b;
+	}
+
+	public static int multiplicar(int a, int b) {
+		return a * b;
+	}
+
+	public static int dividir(int a, int b) {
+		return a / b;
+	}
+
+	public static void operar(int a, int b, String op) {
+		switch (op) {
+		case "s":
+			System.out.println("La suma de " + a + " y " + b + " es " + sumar(a, b));
+			break;
+		case "r":
+			System.out.println("La resta de " + a + " y " + b + " es " + restar(a, b));
+			break;
+		case "m":
+			System.out.println("La multiplicación de " + a + " y " + b + " es " + multiplicar(a, b));
+			break;
+		case "d":
+			System.out.println("La división de " + a + " y " + b + " es " + dividir(a, b));
+			break;
+		default:
+			System.out.println("No existe la opción");
+		}
+	}
+}
+
+
+*******************************************************************************************************************************************
+package com.telecomeducacionit.modulos;
+
+import java.util.Scanner;
+
+public class Main {
+	public static Scanner teclado = new Scanner(System.in);
+
+	public static int solicitarNumero() {
+		System.out.println("Escribe un número");
+		int num = teclado.nextInt();
+		return num;
+	}
+
+	public static String solicitarOperacion() {
+		System.out.println(
+				"Escribe la letra de operación a realizar:" + "\n\ts sumar\n\tr restar\n\tm multiplicar\n\td dividir");
+		String op = teclado.next();
+		return op;
+	}
+	public static boolean preguntar() {
+		boolean x= false;
+		System.out.println("¿Quieres seguir? S/ o cualquier tecla para salir");
+		String seguir = teclado.next();
+		if(seguir.equals("S") || seguir.equals("s"))
+			x = true;
+		return x;
+	}
+	public static void main(String[] args) {
+		
+		do {
+			int a = solicitarNumero();
+			int b = solicitarNumero();
+			String op = solicitarOperacion();
+			Operacion.operar(a, b, op);
+			
+		}while(preguntar());
+		System.out.println("vuelve pronto adios ;)");
+	}
+
+}
