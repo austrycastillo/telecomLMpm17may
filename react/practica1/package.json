@@ -1,0 +1,18 @@
+{
+  "name": "practica1",
+  "version": "1.0.0",
+  "description": "\"prueba de proyecto en node js inicial\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Pepe\"",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "bootstrap": "^5.1.1",
+    "webpack": "^5.54.0",
+    "webpack-dev-server": "^4.3.0"
+  }
+}
